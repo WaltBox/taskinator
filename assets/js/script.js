@@ -10,7 +10,8 @@ var createTaskHandler = function (event) {
     
     // Create list item
     var listItemEl = document.createElement("li");
-    listItemEl.className = "task-item";
+    listItemEl.className= "task-item";
+   
 
     // Create Div to holf task info and add to list item
     var taskInfoEl = document.createElement("div");
@@ -24,12 +25,8 @@ var createTaskHandler = function (event) {
     listItemEl.appendChild(taskInfoEl);
     // Add entire list item to list
     tasksToDoEl.appendChild(listItemEl);
-    
-    var listItemEl = document.createElement("li");
-    listItemEl.className = "task-item";
-    listItemEl.textContent = taskNameInput;
-    tasksToDoEl.appendChild(listItemEl);
 
+    console.dir(listItemEl);
 };
 
 formEL.addEventListener("submit", createTaskHandler);
